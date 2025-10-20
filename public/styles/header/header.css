@@ -1,0 +1,99 @@
+header {
+    padding: 28px 0;
+    background-color: #1F1847;
+}
+
+header .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-logo {
+    width: 193px;
+}
+
+.header-search-bar {
+    padding: 12px 12px 12px 44px;
+    width: 130%;
+    font-size: 20px;
+}
+
+.header-first-flex-item {
+    display: flex;
+    gap: 40px;
+}
+
+.magnifying-glass {
+    position: absolute;
+    top: 13px;
+    left: 8px;
+}
+
+.magnifying-glass .circle {
+    width: 18px;
+    height: 18px;
+    border: 1px solid black;
+    background-color: rgba(0, 96, 206, 0.13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.magnifying-glass .circle .line {
+    width: 3px;
+    height: 14px;
+    background-color: black;
+    transform: translateX(360%) translateY(87%) rotate(-45deg);
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 40px;
+    font-size: 24px;
+}
+
+nav p {
+    margin: 0;
+}
+
+.content-container button {
+    padding: 12px;
+}
+
+.magnifying-glass {
+    
+}
+
+.header-search-bar-container {
+    position: relative;
+}
+.header-sign-up-login-btns {
+    display: flex;
+    gap: 40px;
+}
+
+.sign-up-login-btns {
+    display: flex;
+    gap: 40px;
+}
+
+.header-sign-up-btn {
+    background-color: transparent;
+    font-size: 24px;
+    color: white;
+    border: none;
+}
+
+.header-login-btn {
+    background-color: #D07214;
+    color: white;
+    border-radius: 3px;
+    font-size: 24px;
+    border: none;
+}

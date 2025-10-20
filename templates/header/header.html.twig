@@ -1,0 +1,28 @@
+{% block head %}
+	<link rel="stylesheet" href="{{asset("styles/header/header.css")}}">
+{% endblock %}
+
+<header>
+	<div class="content-container">
+		<div class="header-first-flex-item">
+			<img class="header-logo" src="{{asset("imgs/header/logo.svg")}}" alt="Logo">
+			<div class="header-search-bar-container">
+				<input type="text" class="header-search-bar" placeholder="Titre, réalisateur, année ou pays">
+				<div class="magnifying-glass">
+					<div class="circle">
+						<div class="line"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<p>Films</p>
+			<p>Séries</p>
+			<p>Nouveautés</p>
+		</nav>
+		<div class="header-sign-up-login-btns">
+			<button class="header-sign-up-btn">Se connecter</button>
+			<button class="header-login-btn">S'inscrire</button>
+		</div>
+	</div>
+</header>
