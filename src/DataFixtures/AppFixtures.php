@@ -50,7 +50,7 @@ class AppFixtures extends Fixture
 
         
 
-        for($i = 0; $i < 30; $i++) {
+        for($i = 0; $i < 6; $i++) {
             $film = new Film();
 
             $film->setTitre($this->faker->word());
@@ -65,7 +65,7 @@ class AppFixtures extends Fixture
             $manager->persist($film);
         }
 
-        for($i = 0; $i < 30; $i++) {
+        for($i = 0; $i < 6; $i++) {
             $serie = new Serie();
 
             $serie->setTitre($this->faker->word());

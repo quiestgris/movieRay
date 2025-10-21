@@ -16,7 +16,9 @@
 					<div class="new-items-carrousel">
 						<button class="carrousel-button">
 							<div class="carrousel-arrow">
-                                for
+                                {% for newFilm in news %}
+									<img src="{{newFilm.affiche}}"/>
+								{% endfor %}
                             </div>
 						</button>
 						<div class="carrousel-item-container">
