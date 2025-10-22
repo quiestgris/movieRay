@@ -15,20 +15,24 @@
 				<main>
 					<div class="new-items-carrousel">
 						<button class="carrousel-button">
-							<div class="carrousel-arrow">
-                                {% for newFilm in news %}
-									<img src="{{newFilm.affiche}}"/>
-								{% endfor %}
-                            </div>
+							<div class="carrousel-arrow"></div>
 						</button>
+						
 						<div class="carrousel-item-container">
-							<div class="carrousel-items"></div>
+							<div class="carrousel-items">
+								{% for newFilm in news %}
+									<div class="carrousel-item">
+										<img src="{{newFilm.affiche}}"/>
+										<h2>{{newFilm.titre}}</h2>
+									</div>
+								{% endfor %}
+							</div>
 							<div class="carrousel-indicators">
+								<div class="carrousel-indicator active"></div>
 								<div class="carrousel-indicator"></div>
-                                <div class="carrousel-indicator"></div>
-                                <div class="carrousel-indicator"></div>
-                                <div class="carrousel-indicator"></div>
-                                <div class="carrousel-indicator"></div>
+								<div class="carrousel-indicator"></div>
+								<div class="carrousel-indicator"></div>
+								<div class="carrousel-indicator"></div>
 							</div>
 						</div>
 						<button class="carrousel-button">
@@ -37,5 +41,6 @@
 					</div>
 				</main>
 			{% endblock %}
+			<script src="{{asset("scripts/base.js")}}"></script>
 		</body>
 	</html>

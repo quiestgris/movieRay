@@ -124,8 +124,6 @@ final class WebsiteController extends AbstractController
             }
         }
 
-        dd($news, $mergedNews);
-
         return $this->render("base.html.twig", [
             "news" => $news,
         ]);

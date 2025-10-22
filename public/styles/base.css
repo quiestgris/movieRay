@@ -27,7 +27,7 @@ main {
     padding: 0 220px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 70px;
 }
 
 .new-items-carrousel button.carrousel-button {
@@ -52,6 +52,7 @@ main {
 .carrousel-item-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
 }
 
@@ -71,3 +72,23 @@ main {
     background-color: #6D7586;
 }
 
+.carrousel-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 80px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 790px;
+}
+
+.carrousel-item {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carrousel-item img {
+    width: 211px;
+}

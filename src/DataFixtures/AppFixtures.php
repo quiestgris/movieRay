@@ -60,7 +60,7 @@ class AppFixtures extends Fixture
             $film->setRealisateur($this->faker->firstName() . " " . $this->faker->lastName());
             $film->setStudio(mt_rand(0,1) ? "Paramount" : "Universal Pictures");
             $film->setVideoSource(mt_rand(0,1) ? "films/0/video-source.mp4" : "films/1/video-source.mp4");
-            $film->setAffiche(mt_rand(0,1) ? "films/0/affiche.webp" : "films/1/affiche.jpeg");
+            $film->setAffiche(mt_rand(0,1) ? "films/0/affiche.webp" : "films/1/affiche.jpg");
 
             $manager->persist($film);
         }
@@ -75,7 +75,7 @@ class AppFixtures extends Fixture
             $serie->setRealisateur($this->faker->firstName() . " " . $this->faker->lastName());
             $serie->setStudio(mt_rand(0,1) ? "Paramount" : "Universal Pictures");
             $serie->setVideoSource(mt_rand(0,1) ? "series/0" : "series/1");
-            $serie->setAffiche(mt_rand(0,1) ? "series/0/affiche.jpg" : "series/1/affiche.jpeg");
+            $serie->setAffiche(mt_rand(0,1) ? "series/0/affiche.jpg" : "series/1/affiche.jpg");
 
             $manager->persist($serie);
         }
