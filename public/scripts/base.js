@@ -4,37 +4,47 @@ let activeIndicator = 0;
 
 document.querySelector(".carrousel-arrow.reverse").addEventListener("click", function () {
 
-    activeIndicator++;
+    isScrolling = true
 
-    document.querySelector(".carrousel-indicator.active").classList.remove("active");
-    document.querySelector(".carrousel-indicators").children[activeIndicator].classList.add("active");
 
-    carrouselPosition = carrouselPosition +
-        document.querySelector(".carrousel-item").offsetWidth + 
-        (document.querySelector(".carrousel-items").offsetWidth - document.querySelector(".carrousel-items").offsetWidth * 2);
+    if(activeIndicator < 4 && isScrolling) {
+        activeIndicator++;
+        document.querySelector(".carrousel-indicator.active").classList.remove("active");
+        document.querySelector(".carrousel-indicators").children[activeIndicator].classList.add("active");
+        
 
-    document.querySelector(".carrousel-items").scrollLeft = 
-        carrouselPosition +
-        document.querySelector(".carrousel-item").offsetWidth + 
-    (document.querySelector(".carrousel-items").offsetWidth - document.(".carrousel-item").offsetWidth * 2);
+        document.querySelector(".carrousel-items").scrollLeft = 
+        document.querySelector(".carrousel-items").scrollLeft +
+        document.querySelectorAll(".carrousel-item")[0].offsetWidth + parseInt(window.getComputedStyle(document.querySelector(".carrousel-items")).gap.replace("px", ""));
+    
+        isScrolling = false;
+    }
+
+    setTimeout(function () {
+        isScrolling = true;
+    })
+
+    let gap = window.getComputedStyle(document.querySelector(".carrousel-items")).gap;
     
 })
 
 document.querySelector(".carrousel-arrow").addEventListener("click", function () {
 
-    activeIndicator--;
+    if(activeIndicator > 0 && isScrolling) {
+        activeIndicator--;
+        document.querySelector(".carrousel-indicator.active").classList.remove("active");
+        document.querySelector(".carrousel-indicators").children[activeIndicator].classList.add("active");
 
-    document.querySelector(".carrousel-indicator.active").classList.remove("active");
-    document.querySelector(".carrousel-indicators").children[activeIndicator].classList.add("active");
+        
 
-    carrouselPosition = document.querySelector(".carrousel-items").scrollLeft = 
-        carrouselPosition -
-        document.querySelector(".carrousel-item").offsetWidth - 
-        (document.querySelector(".carrousel-items").offsetWidth - document.querySelector(".carrousel-item").offsetWidth * 3);
+    document.querySelector(".carrousel-items").scrollLeft = document.querySelector(".carrousel-items").scrollLeft -
+        (document.querySelector(".carrousel-item").offsetWidth + parseInt(window.getComputedStyle(document.querySelector(".carrousel-items")).gap.replace("px", "")));
+        
+        isScrolling = false;
+    }
 
-    document.querySelector(".carrousel-items").scrollLeft = 
-        carrouselPosition -
-        document.querySelector(".carrousel-item").offsetWidth - 
-        (document.querySelector(".carrousel-items").offsetWidth - document.querySelector(".carrousel-item").offsetWidth * 3);
+    setTimeout(function () {
+        isScrolling = true;
+    })
     
 })

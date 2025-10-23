@@ -104,7 +104,7 @@ final class WebsiteController extends AbstractController
         for ($i=0; $i < count($mergedNews); $i++) { 
             if($dateDuDernierProduit >= $mergedNews[$i]->getDateSortie()) {
 
-                if(count($news) >= 7) {
+                if(count($news) > 7) {
 
                     for ($j=0; $j < count($news); $j++) { 
 
